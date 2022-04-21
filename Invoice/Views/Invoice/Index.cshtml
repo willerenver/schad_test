@@ -1,0 +1,105 @@
+﻿@{ ViewData["Title"] = "Factua"; }
+
+<section class="content-header">
+    <h1>@ViewBag.Title</h1>
+</section>
+<section class="content">
+    <form action="#" method="post" id="frminvoice" name="frminvoice">
+        <div class="row">
+            <!-- /.col -->
+            <div class="col-md-12">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#datosfactura" data-toggle="tab">Datos de Factura</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="active tab-pane" id="datosfactura">
+                            <div class="row">
+                             
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Factura No:</label>
+                                        <input type="text" readonly name="ReceptionNumber" id="ReceptionNumber" class=" form-control ">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Codigo Cliente:</label>
+                                        <div class="input-group">
+                                            <input class="form-control form-text" type="text" readonly="readonly" name="ProductCode" id="ProductCode">
+                                            <span class="input-group-btn"><button type="button" id="btn-modal-product" class="btn btn-primary" data-toggle="modal" data-target="#modal-product"><i class="fa fa-search"></i> Buscar</button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nombre Cliente:</label>
+                                        <input type="text" readonly name="ReceptionNumber" id="ReceptionNumber" class=" form-control ">
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                            <hr />
+
+                    
+                            <hr />
+                            <table id="tbl_detalle" class="table table-bordered table-hover" style="width:100%">
+                                <thead>
+                                    <tr>
+
+                                        <th>ID</th>
+                                        <th>Copceto</th>
+                                      
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+
+                        </div>
+                        <!-- /.tab-pane -->
+                  
+                    </div>
+                    <!-- /.tab-content -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <button id="btnimprimir" name="btnimprimir" class="btn btn-primary">
+                        <i class="fa fa-fw fa-print fa-lg"></i>Imprimir
+                    </button>
+                    <button id="btnguardar" name="btnguardar" class="btn btn-primary">
+                        <i class="fa fa-fw fa-save fa-lg"></i>Guardar
+                    </button>
+                    <button id="btncancelar" name="btncancelar" class="btn btn-danger">
+                        <i class="fa fa-fw fa-window-close fa-lg"></i>Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+@section scripts{
+    <!-- bootstrap datepicker -->
+    <script src="~/public/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="~/public/bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js"></script>
+    <script src="~/public/plugins/bootstrap-Validator/bootstrapValidator.js"></script>
+    <script src="~/js/functions.js"></script>
+    <script src="~/js/invoice.js"></script>
+}

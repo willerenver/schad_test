@@ -1,0 +1,95 @@
+﻿@{ ViewData["Title"] = "Tipos de Clientes"; }
+<section class="content-header">
+    <h1><i class="fa fa-user"></i> @ViewBag.Title</h1>
+
+</section>
+<section class="content">
+
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+
+            <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#details" data-toggle="tab" aria-expanded="false">@ViewBag.Title</a></li>
+                    <li class="pull-right">
+                        <button type="button" id="btnregistrar" name="btnregistrar" class="btn btn-primary"><i class="fa fa-plus"></i> Registrar</button>
+
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="details">
+                        <table id="tbl_clienttype" class="table table-bordered table-hover" width="100%">
+                            <thead>
+                                <tr>
+
+                                    <th>Codigo</th>
+                                    <th>Descripcion</th>
+                                    <th>Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+
+
+                        </table>
+
+
+                    </div>
+                    <!-- /.tab-pane -->
+
+                </div>
+                <!-- /.tab-content -->
+            </div>
+            <!-- /.nav-tabs-custom -->
+
+        </div>
+    </div>
+    <!-- /.col -->
+
+
+</section>
+<!--Modal Div client-->
+<div class="modal" id="modal-frmclienttype" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="title_form">Registrar Tipo de Cliente</h4>
+            </div>
+            <form id="frmclienttype" action="#" method="post">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Descripcion:</label>
+                                <input type="text" name="Description" id="Description" class="form-control ">
+                                <input type="hidden" name="Id" id="Id" class="form-control ">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="submit" id="btnsave" name="btnsave" class="btn btn-primary"><i class="fa fa-fw  fa-save fa-lg"></i>Guardar</button>
+                    <button type="button" class="btn btn-danger" id="close" name="close" data-dismiss="modal"><i class="fa fa-fw  fa-close fa-lg"></i>Cerrar</button>
+
+                </div>
+
+            </form>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+@section scripts{
+    <script src="~/public/plugins/bootstrap-Validator/bootstrapValidator.js"></script>
+    <script src="~/js/ClientType.js"></script>
+}
